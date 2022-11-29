@@ -1,0 +1,23 @@
+ALGORITHM Dot product
+VAR
+   v1,v2 : ARRAY_OF INTEGER[2];
+BEGIN
+
+    FUNCTION dot_product(v1,v2 ARRAY_OF INTEGER[2]) : INTEGER
+    VAR
+        ps : INTEGER;
+    BEGIN
+         ps := (v1[0]*v2[0]) + (v1[1]*v2[1]);
+        RETURN ps ;
+    END
+    
+      read(v1);
+      read(v2);
+
+  IF (dot_product(v1,v2) == 0) THEN
+        write('The paire of vector are ortoghonal');
+    ELSE
+        write('The paire of vector are not ortoghonal')
+    END_IF
+    
+END
